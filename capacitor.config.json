@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "Colecamp",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

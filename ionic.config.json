@@ -1,0 +1,7 @@
+{
+  "name": "Colecamp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
