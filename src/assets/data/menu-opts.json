@@ -1,0 +1,25 @@
+[
+    { "icon":"person-circle",
+     "name":"User",
+     "redirectTo":"/usuario",
+     "role":["superAdmin"]
+    
+   },
+    { "icon":"man-outline",
+     "name":"Docente",
+     "redirectTo":"/docente",
+     "role":["superAdmin"]
+     
+   },
+    { "icon":"accessibility-outline",
+     "name":"Estudiante",
+     "redirectTo":"/estudiante",
+     "role":["superAdmin","student","admin"]
+   },
+    { "icon":"home-outline",
+     "name":"school",
+     "redirectTo":"/datalist",
+     "role":["superAdmin","admin"]
+   }
+   ]
+  

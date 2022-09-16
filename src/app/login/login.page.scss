@@ -1,0 +1,76 @@
+::-webkit-scrollbar, *::-webkit-scrollbar {
+    display: none;
+    overflow: hidden;
+}
+
+.scroll-content {
+    overflow: hidden;
+}
+ion-toolbar{
+  --ion-background-color:transparent;
+  --opacity:0;
+}
+ion-header{
+  position: absolute;
+}
+
+ion-card {
+    --background: linear-gradient(45deg, var(--ion-color-tertiary) 0%, var(--ion-color-primary) 100%);
+    overflow: hidden;
+    --overflow: hidden;
+}
+
+.circle {  
+    height: 600px;
+    width: 600px;
+    // background: linear-gradient(90deg, var(--ion-color-secondary) 0%, var(--ion-color-primary) 100%);
+    background: var(--ion-color-white);
+    box-shadow: 0px 1px 10px rgba(98, 140, 255, 0.5);
+    border-radius: 50%;
+  }
+  .circle1 {
+    margin-left: -200px;
+    margin-top: -255px;
+    margin-bottom: 10px;
+  }
+  
+  .circle2 {
+    margin-left: -15px;
+    margin-top: -18px;
+  }
+  
+  .container {
+    position: absolute;
+    top: 3vh;
+    left: 8vw;
+    align-items: center;
+  }
+  
+  .itemDesign {
+    border-radius: 20px;
+  }
+  
+  .persona {
+    font-size: 5rem;
+    margin-left: 25vw;
+  }
+  
+  .align {
+    position: absolute;
+    width: 65%;
+    margin: auto;
+    bottom: 38vh;
+    left: 16vw;
+    ion-text {
+      font-size: small;
+    }
+  }
+  
+  ion-row {
+    margin-left: -8vw;
+    ion-icon {
+      font-size: 5rem;
+      margin-left: 25vw;
+      font-size: 2rem;
+    }
+  }

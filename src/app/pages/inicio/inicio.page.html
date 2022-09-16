@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+
+  <!-- <ion-buttons slot="start"> -->
+    <ion-button (click)="logout()" color="danger">
+      <ion-icon icon="ion:log-out"  name="log-out" flip="horizontal"></ion-icon>
+      <small>logout</small>
+    </ion-button>
+    <!-- <iconify-icon icon="ion:log-out" flip="horizontal"></iconify-icon> -->
+  <!-- </ion-buttons> -->
+
+ 
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <!-- <div *ngFor="let c of componentes |async" >
+
+    <ion-list 
+    
+    *ngIf="c.name!='Estudiante'"
+    >
+      <ion-item  
+      [routerLink]="c.redirectTo"
+      detail="true"
+      >
+        <ion-icon  [name]="c.icon" slot="start" color="primary"></ion-icon>
+        {{c.name}}
+      </ion-item>
+    </ion-list>
+  </div> -->
+
+  <div  *ngFor="let p of Usuario"> 
+ 
+    <div *ngFor="let r of p.role">
+      <ion-list *ngIf="rol==r"
+      >
+        <ion-item   
+        [routerLink]="p.redirectTo"
+        detail="true"
+        >
+          <ion-icon  [name]="p.icon" slot="start" color="primary"></ion-icon>
+          {{p.name}}
+        </ion-item>
+      </ion-list>
+    </div>
+
+    </div>
+
+</ion-content>

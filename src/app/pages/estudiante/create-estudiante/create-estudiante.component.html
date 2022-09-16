@@ -1,0 +1,96 @@
+<ion-content class="bg-color">
+  <ion-card class="ion-no-margin">
+           <form 
+           [formGroup]="formCreateStudent"
+           >
+     <ion-card-content>
+
+         <ion-item>
+             <ion-input  
+             required 
+             type="text" 
+             placeholder="First Name" 
+             formControlName="first_name"
+
+             >
+               <ion-icon name="person-outline"  ></ion-icon>
+             </ion-input>
+         </ion-item>
+
+         <ion-item>
+             <ion-input type="text" 
+             placeholder="Last Name" 
+             formControlName="last_name"
+
+             required 
+             >
+               <ion-icon name="person-outline"  ></ion-icon>
+             </ion-input>
+         </ion-item>
+
+         <ion-item>
+             <ion-input 
+             required 
+             type="text" 
+             placeholder="Cellphone" 
+             formControlName="cellphone"
+
+             > 
+               <ion-icon name="call-outline" ></ion-icon>
+             </ion-input>
+         </ion-item>
+
+         <ion-item>
+             <ion-input 
+             required 
+             type="text" 
+             placeholder="C.I." 
+             formControlName="ci"
+            >
+               <ion-icon name="finger-print-outline"  ></ion-icon>
+             </ion-input>
+         </ion-item>
+
+         <ion-item>
+             <ion-input  
+             required 
+             type="email" 
+             placeholder="Email" 
+             formControlName="email"
+            >
+               <ion-icon name="mail-outline" ></ion-icon>
+             </ion-input>
+         </ion-item>
+
+     
+         <ion-item>
+             <ion-input 
+             required 
+             name="password" type="password" 
+             placeholder="Password" 
+             formControlName="password"
+             autocomplete="new-password"
+           
+             >
+               <ion-icon name="lock-closed-outline" ></ion-icon>
+             </ion-input>
+         </ion-item>
+
+         <ion-item>
+             <ion-input 
+             required 
+             name="password" type="password" 
+             placeholder="Password Confirmation" 
+             formControlName="password_confirmation"
+             autocomplete="new-password"
+           
+             >
+               <ion-icon name="lock-closed-outline" ></ion-icon>
+             </ion-input>
+         </ion-item>
+
+     </ion-card-content>
+      </form>
+  </ion-card>
+
+</ion-content>

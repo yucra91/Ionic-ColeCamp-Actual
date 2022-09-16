@@ -1,0 +1,139 @@
+<!-- <ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button mode="ios" defaulthref="/" text="regreso">
+      </ion-back-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content class="bg-color">
+    <ion-card class="ion-no-margin">
+
+        <ion-card-header>
+            <ion-card-title>
+              Sign Up
+            </ion-card-title>
+            <ion-card-subtitle>
+            Crea tu cuenta
+              </ion-card-subtitle>
+        </ion-card-header>
+
+             <form [formGroup]="form"
+             (ngSubmit)="registerUser(form.value)">
+       <ion-card-content>
+
+           <ion-item>
+               <ion-input  
+               required 
+               type="text" 
+               placeholder="First Name" 
+               formControlName="first_name">
+                 <ion-icon name="person-outline"  ></ion-icon>
+               </ion-input>
+           </ion-item>
+
+           <ion-item>
+               <ion-input type="text" 
+               placeholder="Last Name" 
+               formControlName="last_name"
+               required 
+               >
+                 <ion-icon name="person-outline"  ></ion-icon>
+               </ion-input>
+           </ion-item>
+
+           <ion-item>
+               <ion-input 
+               required 
+               type="text" 
+               placeholder="Cellphone" 
+               formControlName="Cellphone"> 
+                 <ion-icon name="call-outline" ></ion-icon>
+               </ion-input>
+           </ion-item>
+
+           <ion-item>
+               <ion-input 
+               required 
+               type="text" 
+               placeholder="C.I." 
+               formControlName="CI">
+                 <ion-icon name="finger-print-outline"  ></ion-icon>
+               </ion-input>
+           </ion-item>
+
+           <ion-item>
+               <ion-input 
+               required 
+               type="text" 
+               placeholder="Image" 
+               formControlName="imagenes">
+                 <ion-icon name="image-outline" ></ion-icon>
+               </ion-input>
+           </ion-item>
+  
+           <ion-item>
+               <ion-input  
+               required 
+               type="email" 
+               placeholder="Email" 
+               formControlName="email">
+                 <ion-icon name="mail-outline" ></ion-icon>
+               </ion-input>
+           </ion-item>
+
+       
+           <ion-item>
+               <ion-input 
+               required 
+               name="password" type="password" 
+               placeholder="Password" 
+               autocomplete="new-password"
+               formControlName="password">
+                 <ion-icon name="lock-closed-outline" ></ion-icon>
+               </ion-input>
+           </ion-item>
+
+
+  
+           <div class="sign-btn-wrap">
+              <ion-button  
+              expand="block"
+              shape="round" 
+              type="submit"  
+              
+              class="sign-btn" 
+              [disabled]="form.invalid">Sign Up</ion-button>
+             </div>
+
+
+
+             <div class="text-tag">
+             <span>Ya tienes una cuenta precione </span>
+             <a >aqui</a>
+             </div>
+
+             <div class="text-tag">
+             <span>Registrarse con</span>
+             </div>
+
+             <div class="social-btns">
+                 <ion-button fill="clear"  class="facebookbtn ion-no-padding">
+            
+               <ion-col size="3"><ion-icon name="logo-facebook" color="primary"></ion-icon></ion-col>
+                 </ion-button>
+
+                 <ion-button fill="clear"  class="googlebtn ion-no-padding">
+               
+            <ion-col size="3"><ion-icon name="logo-google" color="danger"></ion-icon></ion-col>
+
+                 </ion-button>
+
+               </div>
+
+       </ion-card-content>
+        </form>
+    </ion-card>
+
+</ion-content>
