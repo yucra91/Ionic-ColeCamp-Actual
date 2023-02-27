@@ -12,9 +12,6 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
 import { MenuPageModule } from './menu/menu.module';
 import { CookieService } from 'ngx-cookie-service';
 import { AuthInterceptor } from './core/auth.interceptor';
-import { SQLite } from '@ionic-native/sqlite/ngx';
-
-
 @NgModule({
   declarations: [AppComponent],
   imports: [BrowserModule,
@@ -23,7 +20,6 @@ import { SQLite } from '@ionic-native/sqlite/ngx';
     HttpClientModule,
     MenuPageModule,
     IonicStorageModule.forRoot(),
-   
     ],
   providers: [HttpClientModule,Storage,{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, CookieService,{
     provide:HTTP_INTERCEPTORS,

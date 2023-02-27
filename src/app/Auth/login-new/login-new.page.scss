@@ -1,0 +1,49 @@
+.container{
+    height: 100% !important;
+    background-image: url("../../../assets/fondo_login.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+}
+ion-header{
+    position: absolute;
+}
+ion-toolbar{
+    --ion-background-color: transparent;
+    --opacity:0;
+}
+.inputBox{
+    border-radius: 18px;
+    --background: white;
+    --color: rgb(0, 0, 0);
+}
+.boxInvi{
+    --background: transparent;
+}
+.sep{
+    margin: 10px 0px 10px 0px;
+}
+.sepInput{
+    margin: 30px 0px 30px 0px;
+}
+.btn{
+    height: 6vh;
+    --border-radius: 15px;
+}
+.borderNo{
+    --border-style: none;
+}
+ion-item .record{
+    font-size: 14px;
+}
+ion-checkbox {
+    --size: 25px;
+    --background-checked: #15CF7D;
+    --background: white;
+    --checkmark-color: white;
+}
+  
+ion-checkbox::part(container) {
+border-radius: 6px;
+border: 2px solid #15CF7D;
+}

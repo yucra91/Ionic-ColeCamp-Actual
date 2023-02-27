@@ -1,0 +1,22 @@
+<ion-content>
+  <ion-grid class="container">
+    <ion-row class="ion-justify-content-center row ion-align-items-center">
+      <ion-col size="10">
+        <img src="/assets/Logo.png" class="logo uab-logo">
+        <img src="/assets/colecamp.png" class="logo colecamp-logo">
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-justify-content-center" style="padding-top: 2vh;">
+      <ion-col size="10">
+        <ion-button expand="block" class="btn" shape="round" color="uab" (click)="redireccionIngresar()" expand="block">
+          <p class="ion-text-capitalize">Ingresar</p>
+          <ion-icon slot="end" name="arrow-forward-outline"></ion-icon>
+        </ion-button>
+        <ion-button expand="block" class="btn" color="uab" (click)="redireccionRegistrar()" expand="block">
+          <p class="ion-text-capitalize">Registrarse</p>
+          <ion-icon slot="end" name="arrow-forward-outline"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

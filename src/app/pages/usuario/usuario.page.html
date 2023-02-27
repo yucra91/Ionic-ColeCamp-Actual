@@ -2,6 +2,10 @@
 
 <ion-content>
 
+  <ion-searchbar 
+  [formControl]="BuscarForm"
+  placeholder="Buscar"></ion-searchbar>
+
   <ion-list>
    
     <ion-item-sliding *ngFor="let user of admins.Admin">
@@ -17,7 +21,7 @@
       <ion-item>
         <ion-label>
       
-          <h3>{{ user.personas.first_name}}</h3>
+          <h3>{{ user.personas.first_name | uppercase}}</h3>
         </ion-label>
       </ion-item>  
       
@@ -38,7 +42,7 @@
   </ion-fab-button>
 </ion-fab>
 
-  <ion-modal trigger="open-modal" (willDismiss)="onWillDismiss($event)">
+  <ion-modal [isOpen]="estado" trigger="open-modal" (willDismiss)="onWillDismiss($event)">
    
     <ng-template>
       <ion-header>
@@ -56,7 +60,7 @@
       <ion-content class="ion-padding">
         <!-- <ion-item> -->
 
-          <app-create-usuario (enviarUsuario)="test"></app-create-usuario>
+          <app-create-usuario [resivir]="padre"></app-create-usuario>
         <!-- </ion-item> -->
 
       </ion-content>
@@ -64,3 +68,6 @@
   </ion-modal>
 
 </ion-content>
+<!-- <app-create-usuario (resivir)="padre"></app-create-usuario> -->
+
+<!-- [isOpen]="estado" -->

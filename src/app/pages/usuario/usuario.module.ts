@@ -18,7 +18,6 @@ import { CreateUsuarioComponent } from './create-usuario/create-usuario.componen
     UsuarioPageRoutingModule,
     ComponentsModule,
     ReactiveFormsModule,
- 
   ],
   declarations: [UsuarioPage,CreateUsuarioComponent]
 })

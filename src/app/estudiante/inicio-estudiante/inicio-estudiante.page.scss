@@ -1,0 +1,19 @@
+ion-content{
+    // --ion-backgraund-color: linear;
+    // background: rgb(2,0,36);
+    --ion-background-color: linear-gradient(180deg, rgba(2,0,37,1) 0%, rgba(0,51,102,1) 35%, rgba(0,212,255,1) 100%);
+}
+ion-slides {
+    height: 30%;
+}
+.slides-card{
+    width: 90%; 
+    height: 100%; 
+    background-size: cover;
+}
+ion-card-content{
+    background-color: #effafa34;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    margin-top: 35%;
+}

@@ -1,0 +1,29 @@
+.container {
+    height: 100% !important;
+    background-image: url("../../../assets/fondo_login.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+}
+.logo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.uab-logo{
+    width: 20vh;
+}
+.colecamp-logo{
+    width: 35vh;
+}
+// .letra{
+//     font-family: 'Source Sans Pro', sans-serif;
+// }
+.row{
+    height: 50%;
+}
+.btn{
+    margin-top: 30px;
+    height: 6vh;
+    --border-radius: 15px;
+}

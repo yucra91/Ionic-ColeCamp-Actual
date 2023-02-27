@@ -13,10 +13,10 @@ export class AppComponent {
 
   componentes: Observable<Componente[]>;
   constructor(
-    private dataService: UserService,
     private storage:Storage,
   ) {
-    this.componentes=this.dataService.getMenuOpts();
+
+    
     this.storage.create();
   }
 }

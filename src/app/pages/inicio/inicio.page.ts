@@ -28,7 +28,6 @@ export class InicioPage implements OnInit {
   }
 
   ngOnInit() {
-    this.componentes=this.dataService.getMenuOpts();
     this.Usuario=this.dataService.getData();
     console.log(this.Usuario);
     

@@ -3,9 +3,10 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { UserService } from '../../service/user.service';
 
 import { Persona, ResponseStudent } from 'src/app/model/user.model';
-import { IonModal, IonList } from '@ionic/angular';
+import { IonModal, IonList, NavController } from '@ionic/angular';
 import { CreateEstudianteComponent } from './create-estudiante/create-estudiante.component';
 import { UiServiceService } from 'src/app/service/ui-service.service';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-estudiante',
@@ -23,26 +24,33 @@ export class EstudiantePage implements OnInit {
  
   students:ResponseStudent;
   persona : Persona;
+  BuscarForm = new FormControl('',[]);
 
   constructor(
 
     private uiService:UiServiceService,
     private userService:UserService,
+    public navCtrl: NavController,
 
   ) { 
     this.students =  new ResponseStudent;
   }
 
   ngOnInit() {
-    this.list();
+    this.list(this.BuscarForm.value);
+    this.BuscarForm.valueChanges.subscribe((res:any)=>
+    {
+      this.list(this.BuscarForm.value);
+    });
     this.rol=this.userService.rol();
     console.log(this.rol);
+   
   }
  
 
-  list(){
+  list(search: any){
 
-    this.userService.getStudent().subscribe(data =>{  
+    this.userService.getStudent({'name':search}).subscribe(data =>{  
       this.students = data;
       console.log(this.students);
       
@@ -54,7 +62,14 @@ export class EstudiantePage implements OnInit {
   }
 
   share(user:any){
-    console.log('share ',user);
+
+    let prueba = {
+      id:'5'
+    }
+    // this.navCtrl.push(CreateEstudianteComponent,{probando:prueba});
+    // this.navCtrl.setDirection('app-create-estudiante',{probando:prueba});
+
+    // console.log('share ',user);
   }
   eliminar(user:any){
     console.log('share ',user);
@@ -74,7 +89,7 @@ export class EstudiantePage implements OnInit {
     console.log(valido);
     
     if(valido){
-      this.modal.dismiss(this.list());
+      this.modal.dismiss(this.list(this.BuscarForm.value));
     }else{
             this.uiService.alertaInformativa('gmail ya existe o dato gmail no son correcto');
     }

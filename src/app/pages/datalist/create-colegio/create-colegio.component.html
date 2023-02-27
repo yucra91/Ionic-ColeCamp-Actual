@@ -1,0 +1,79 @@
+<ion-content class="bg-color">
+  <ion-card class="ion-no-margin">
+           <form 
+           [formGroup]="formColegio"
+           >
+     <ion-card-content>
+
+         <ion-item>
+             <ion-input  
+             required 
+             type="text" 
+             placeholder="  Nombre Colegio" 
+             formControlName="nombre_colegio"
+             >
+               <ion-icon name="school-outline"  ></ion-icon>
+             </ion-input>
+         </ion-item>
+
+         <ion-item>
+             <ion-input type="text" 
+             placeholder="  Direccion" 
+             formControlName="direccion"
+             required 
+             >
+               <ion-icon name="person-outline"  ></ion-icon>
+             </ion-input>
+         </ion-item>
+
+         <ion-item>
+             <ion-input 
+             required 
+             type="text" 
+             placeholder="  Telefono" 
+             formControlName="telefono"
+
+             > 
+               <ion-icon name="call-outline" ></ion-icon>
+             </ion-input>
+         </ion-item>
+
+         <ion-item>
+             <ion-input 
+             required 
+             type="text" 
+             placeholder="  Celular" 
+             formControlName="celular"
+            >
+               <ion-icon name="finger-print-outline"  ></ion-icon>
+             </ion-input>
+         </ion-item>
+
+         <!-- <ion-item>
+             <ion-input  
+             required 
+             type="email" 
+             placeholder="  Imagen Colegio" 
+             formControlName="imagen"
+            >
+               <ion-icon name="image-outline" ></ion-icon>
+             </ion-input>
+         </ion-item> -->
+
+         <ion-item>
+           <ion-icon name="image-outline" ></ion-icon>
+           
+             <input  
+             type="file" 
+             formControlName="imagen"
+            >
+           
+         </ion-item>
+
+  
+
+     </ion-card-content>
+      </form>
+  </ion-card>
+
+</ion-content>

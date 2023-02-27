@@ -35,8 +35,6 @@ users:any;
     private userService:UserService,
     private navCtrl:NavController,
     private uiService:UiServiceService,
-    private http:HttpService,
-    private storage:Storage,
     ) {
       this.formLogin = this.fb.group({
         email: ['', [Validators.required]],
@@ -45,11 +43,14 @@ users:any;
       });
      }
 
-  ngOnInit() {}
+  ngOnInit() {
+    // this.userService.probando();
+    // this.userService.get();
+  }
+  
 
   async login(form:any){
     this.isLoading = true;
-
     const valido = await this.userService
       .login(form.email, form.password);
 

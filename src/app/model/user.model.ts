@@ -40,3 +40,17 @@
     ok : boolean;
     Student : Student[];
   }
+
+  export class Colegio {
+    id:number;
+    nombre_colegio : string;
+    direccion: string;
+    telefono: string;
+    celular: string;
+    imagen: string
+  }
+
+  export class ResponseColegio {
+    ok : boolean;
+    Colegio : Colegio[];
+  }

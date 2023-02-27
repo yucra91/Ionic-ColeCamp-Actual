@@ -1,0 +1,110 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" color="white"></ion-back-button>
+    </ion-buttons>
+    <!-- <ion-title>login</ion-title> -->
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid class="container">
+    <ion-row class="ion-justify-content-center ion-align-items-center">
+      <ion-col class="ion-justify-content-center ion-align-items-center" size="3" style="margin-top: 5%;">
+        <img src="assets/avatars/avatar.png" alt="">
+      </ion-col>
+      <ion-col size="10">
+        <form [formGroup]="form" (ngSubmit)="login(form.value)">
+          <!-- <ion-list-header>
+            <ion-label>Formulario Valido:{{form.valid}}</ion-label>
+          </ion-list-header> -->
+          <ion-item class="boxInvi borderNo">
+            <ion-label class="ion-text-center" style="margin: -5px 0px -5px 0px ; font-size: 25px;"> Registro</ion-label>
+            <!-- <ion-text class="ion-text-center" style="font-size: 15px;"> Crear una nueva cuenta</ion-text> -->
+          </ion-item>
+          <ion-item class="sepInput ion-justify-content-center ion-align-items-center inputBox">
+            <ion-icon slot="start" color="uab" name="person-outline"></ion-icon>
+            <ion-label color="uab" position="floating">
+              Nombre
+            </ion-label>
+            <ion-input type="text" mode="md"
+                      placeholder="Nombre" 
+                      name="nombres" 
+                      formControlName="nombres"
+                      pattern="([a-zA-Z]{3,})$"
+                      onkeypress="return (event.charCode>=65 && event.charCode<=90)||(event.charCode>=97 && event.charCode<=122)"
+                      required>
+            </ion-input>
+          </ion-item>
+          <ion-item class="sepInput ion-justify-content-center ion-align-items-center inputBox">
+            <ion-icon slot="start" color="uab" name="person-outline"></ion-icon>
+            <ion-label color="uab" position="floating">
+              Apellidos
+            </ion-label>
+            <ion-input type="text" mode="md"
+                      placeholder="Apellidos" 
+                      name="apellidos" 
+                      formControlName="apellidos"
+                      pattern="([a-zA-Z]{3,})$"
+                      onkeypress="return (event.charCode>=65 && event.charCode<=90)||(event.charCode>=97 && event.charCode<=122)"
+                      required>
+            </ion-input>
+          </ion-item>
+          <ion-item class="sepInput ion-justify-content-center ion-align-items-center inputBox">
+            <ion-icon slot="start" color="uab" name="school-outline"></ion-icon>
+            <ion-label color="uab" position="floating">
+              Email:
+            </ion-label>
+              <ion-select interface="popover" placeholder="Seleccione su colegio" formControlName="colegio" required>
+                <ion-select-option *ngFor="let col of colegios" [value]="col.id_col">{{col.nombre}}</ion-select-option>
+              </ion-select>
+          </ion-item>
+          <ion-item class="sepInput ion-justify-content-center ion-align-items-center inputBox">
+            <ion-icon slot="start" color="uab" name="mail-outline"></ion-icon>
+            <ion-label color="uab" position="floating">
+              Email:
+            </ion-label>
+            <ion-input type="email" mode="md"
+                      placeholder="Email" 
+                      name="email" 
+                      formControlName="email"
+                      pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
+                      required>
+            </ion-input>
+          </ion-item>
+          <ion-item class="sepInput ion-justify-content-center ion-align-items-center inputBox">
+            <ion-icon slot="start" color="uab" name="lock-closed-outline"></ion-icon>
+            <ion-label color="uab" position="floating">Password:</ion-label>
+            <ion-input [type]="showPassword ? 'text' : 'password'"
+                      name="password"
+                      placeholder="Password"
+                      formControlName="password"
+                      required
+                      >
+                      </ion-input>
+            <ion-icon *ngIf="mostrarIcono" slot="end" color="uab" [name]="nameIcon" (click)="togglePassword()" ></ion-icon>
+          </ion-item>
+          <ion-item class="borderNo sep boxInvi ion-no-padding">
+            <ion-checkbox name="acuerdo" checked="false" style="margin-right: 1px;" slot="start" color="success" required></ion-checkbox>
+            <ion-label style="padding:0px !important;" class="acuerdo">
+              estoy de acuerdo con los <a href="">terminos y condiciones</a>
+            </ion-label>
+          </ion-item>
+          <ion-button expand="block" class="sep btn ion-text-capitalize" shape="round" color="uab"
+                      [disabled]="form.invalid"
+                      type="submit">
+            registrarse
+          </ion-button>
+          <ion-item class="borderNo sep boxInvi">
+            <ion-label class="ion-text-center">O registrarse con</ion-label>
+          </ion-item>
+          <ion-button expand="block" color="facebook" class="sep btn ion-text-capitalize" shape="round">
+            <ion-icon name="logo-facebook"></ion-icon>
+            Facebook
+          </ion-button>
+          <!-- <pre>{{form.value | json}}</pre> -->
+        </form>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

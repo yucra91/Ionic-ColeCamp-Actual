@@ -89,6 +89,19 @@
              </ion-input>
          </ion-item>
 
+         <ion-item >
+          <ion-icon slot="start"  name="school-outline"></ion-icon>
+            <ion-select 
+            interface="popover" 
+            placeholder="Seleccione su colegio" 
+            formControlName="colegio_id" 
+            >
+              <ion-select-option *ngFor="let colegio of colegios.Colegio"  [value]="colegio.id">{{colegio.nombre_colegio}}
+
+              </ion-select-option>
+            </ion-select>
+        </ion-item>
+
      </ion-card-content>
       </form>
   </ion-card>

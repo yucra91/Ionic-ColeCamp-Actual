@@ -41,18 +41,5 @@ canLoad():Observable< boolean > | Promise<boolean> | boolean {
       return false;
   }
 
-
-  // canActivate(
-  //   route: ActivatedRouteSnapshot,
-  //   state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-  //     this.storage.create();
-  //   const token =this.storage.get('token');
-  //   if(token){
-  //     return true;
-  //   }
-
-  //   this.router.navigate(['/login']);
-  //     return false;
-  // }
   
 }
